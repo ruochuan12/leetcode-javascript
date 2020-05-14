@@ -4,6 +4,8 @@
  * [349] 两个数组的交集
  */
 
+
+// set 方案
 // @lc code=start
 /**
  * @param {number[]} nums1
@@ -12,18 +14,44 @@
  */
 var intersection = function(nums1, nums2) {
     var result = [];
-    var biggerSet = new Set(nums1);
-    var smallerSet = new Set(nums2);
-    if(nums2.length > nums1.length){
-        biggerSet = new Set(nums2);
-        smallerSet = new Set(nums1);
+    var smallerSet = new Set(nums1);
+    var biggerSet = new Set(nums2);
+    if(biggerSet.size < smallerSet.size){
+        var temp = smallerSet;
+        smallerSet = biggerSet;
+        biggerSet = temp;
     }
-    for(var item of smallerSet){
+    smallerSet.forEach((item) => {
         if(biggerSet.has(item)){
             result.push(item);
         }
-    }
+    });
     return result;
 };
 // @lc code=end
 
+
+// 数组 方案
+// @lc code=start
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function(nums1, nums2) {
+    var result = [];
+    var smallerSet = nums1;
+    var biggerSet = nums2;
+    if(biggerSet.length < smallerSet.length){
+        var temp = smallerSet;
+        smallerSet = biggerSet;
+        biggerSet = temp;
+    }
+    smallerSet.forEach((item) => {
+        if(biggerSet.includes(item)){
+            result.push(item);
+        }
+    });
+    return result;
+};
+// @lc code=end

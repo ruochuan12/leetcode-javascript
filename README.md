@@ -1,6 +1,6 @@
-# leetcode-with-javascript
+# leetcode-javascript
 
-leetcode-with-javascript
+leetcode-javascript
 
 [别人写的vscode-leetcode插件](https://www.cnblogs.com/jdneo/p/8456914.html)
 助力用vscode 刷 `leetcode` 题目。

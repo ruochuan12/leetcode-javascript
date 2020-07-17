@@ -1,5 +1,7 @@
 # leetcode-javascript
 
+[leetcode-javascript](https://github.com/lxchuan12/leetcode-javascript/)
+
 leetcode-javascript
 
 [别人写的vscode-leetcode插件](https://www.cnblogs.com/jdneo/p/8456914.html)
